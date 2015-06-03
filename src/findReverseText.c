@@ -20,32 +20,25 @@
 int findReverseText(char *text, char *wordToFind){
 	int i=0, j=0, k=0 ,p=0;
 
-	
-while(text[p] != 0){
-		
-  if(text[p] == wordToFind[0]){
-			
+while(text[p] != 0){	
+  if(text[p] == wordToFind[0]){		
 	while(text[i] != 0){
 		i++;
-	}
-	
+	}	
 	while(wordToFind[j] != 0){
 		j++;;
 	}
-		j--;
-	
+		j--; 
 	while(text[i] != wordToFind[j]) {
-		while(text[i] != wordToFind[j]){
-			i--;
-		}
-		if(j>0)
-			j--;
+	while(text[i] != wordToFind[j]){
+		i--;
 	}
-	
+	if(j>0)
+	  j--;
+  }
 	return i;
   }
-   p++;	
+    p++;	
 }
-	
 	return -2;
 }
